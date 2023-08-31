@@ -37,7 +37,7 @@ export const Home = () => {
     <main className="min-h-screen grid grid-rows-[1fr_1fr_auto] ">
       {/* Card home */}
       <article
-        className={`m-auto w-[220px] text-center capitalize border-[5px] rounded-[1.1rem] ${
+        className={`m-auto my-2 w-[220px] text-center capitalize border-[5px] rounded-[1.1rem] ${
           borderStylePokemonType[homeIdPokemons?.types[0]]
         }`}
       >
@@ -70,7 +70,7 @@ export const Home = () => {
       </article>
 
       <section className="flex flex-col  items-center mx-2">
-        <article className="grid gap-5">
+        <article className="grid gap-3">
           {/* seccion superior */}
           <div className="text-center">
             <img src="/images/banner.png" alt="" />
