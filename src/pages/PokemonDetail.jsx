@@ -17,15 +17,15 @@ export const PokemonDetail = () => {
   }, []);
 
   return (
-    <main className=" grid gap-8   max-w-[1190px] mx-auto p-2 py-28">
+    <main className=" grid gap-8   max-w-[1190px] mx-auto p-2 py-28 dark:text-white px-10">
       <article className="">
         
         <header
-          className={` relative h-[105px] ${
+          className={` relative h-[105px] rounded-2xl ${
             bgStylePokemonType[pokemonData?.types[0]]
           }`}
         >
-          <Link to='/pokedex/' className="absolute -top-[100%] z-10 text-white bg-zinc-700 font-bold text-sm rounded-full  inline-block py-1 px-5 shadow-lg shadow-slate-800/60" >Go Back</Link>
+          <Link to='/pokedex/' className="absolute -top-[100%] z-10 text-white bg-zinc-700 font-bold text-sm rounded-full  inline-block py-1 px-5 shadow-lg shadow-slate-800/60 dark:bg-white dark:text-black transition-all ease-in-out " >Go Back</Link>
           <img
             className="h-[200%] absolute left-1/2 -translate-x-1/2 bottom-0 hover:scale-110"
             src={pokemonData?.image}
@@ -33,8 +33,8 @@ export const PokemonDetail = () => {
           />
         </header>
 
-        <section className="sm:px-24 ">
-          <section className="text-center mb-16">
+        <section className="sm:px-24">
+          <section className="text-center mb-16 ">
             {/*  seccion del Id y el nombre */}
             <div className=" grid gap-4 mt-4">
               <span className={`text-3xl font-bold ${nameStylePokemon[pokemonData?.types[0]]} `}>#{pokemonData?.id}</span>

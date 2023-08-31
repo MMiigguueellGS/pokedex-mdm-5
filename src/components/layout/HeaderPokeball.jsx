@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/slices/trainer.slice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const HeaderPokeball = ({ children }) => {
   //Dark
@@ -21,17 +21,26 @@ export const HeaderPokeball = ({ children }) => {
       setEventsDark(false);
       setEventIcono(<i className="bx bx-moon  text-blue-400 text-3xl "></i>);
     } else {
+      
       document.documentElement.classList.add("dark");
       localStorage.setItem("dark", true);
       setEventsDark(true);
       setEventIcono(<i className="bx bx-sun  text-yellow-400 text-3xl "></i>);
     }
   };
+  useEffect(()=>{
+    if (document.documentElement.classList.contains("dark")) {
+      setEventIcono(<i className="bx bx-moon  text-blue-400 text-3xl "></i>);
+    }else{
+      setEventIcono(<i className="bx bx-sun  text-yellow-400 text-3xl "></i>);
+    }
+    
+  },[])
 
   const savedInfo = localStorage.getItem("dark");
 
   return (
-    <section>
+    <section className="dark:bg-neutral-700">
       <header className="">
         <div className="h-16 bg-red-600  relative ">
           
