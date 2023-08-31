@@ -27,10 +27,10 @@ export const Pagination = ({
   const handleFirstPage = () => setCurrentPage(FIRST_PAGE);
 
   return (
-    <ul className="flex justify-center  p-4 items-center dark:text-white font-bold text-xl my-2">
+    <ul className="flex justify-center  p-4 items-center dark:text-white font-bold text-sm my-2">
       {currentPage >= 2 && (
         <li
-          className="p-3 bg-red-500 border-r-2 hover:bg-red-400 cursor-pointer"
+          className="p-2 py-3 bg-red-500 border-r-2 hover:bg-red-400 cursor-pointer"
           onClick={handleFirstPage}
         >
           {"<<"}
@@ -64,7 +64,7 @@ export const Pagination = ({
         {">"}
       </li>
       <li
-        className="p-3 hover:bg-red-400 cursor-pointer bg-red-500"
+        className="p-2 py-3 hover:bg-red-400 cursor-pointer bg-red-500"
         onClick={handleLastPage}
       >
         {">>"}

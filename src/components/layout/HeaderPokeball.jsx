@@ -27,6 +27,7 @@ export const HeaderPokeball = ({ children }) => {
       setEventIcono(<i className="bx bx-sun  text-yellow-400 text-3xl "></i>);
     }
   };
+  
   useEffect(() => {
     if (document.documentElement.classList.contains("dark")) {
       setEventIcono(<i className="bx bx-moon  text-blue-400 text-3xl "></i>);
