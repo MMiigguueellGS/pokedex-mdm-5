@@ -26,18 +26,19 @@ export const Pokedex = () => {
   return (
     <main>
       <section>
-        <p>
-          <span>Welcome {name}</span>
+        <p className="text-center text-2xl font-bold mt-4">
+          <span>Welcome <span className="text-red-500">{name}</span></span>
         </p>
-        <form>
+        <form className="text-center mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
           <input
+            className="border-4 border-red-200 border-b-red-400  text-center outline-none py-1"
             value={pokemonName}
             onChange={handleChange(setPokemonName)}
             placeholder="Search pokemon..."
             type="text"
           />
 
-          <select value={pokemonType} onChange={handleChange(setPokemonType)}>
+          <select className="border-4 border-red-200 border-b-red-400 px-9 outline-none py-1" value={pokemonType} onChange={handleChange(setPokemonType)}>
             <option value="">All pokemons</option>
             {types.map((type) => (
               <option key={type.name} value={type.name} className="capitalize">
@@ -47,6 +48,7 @@ export const Pokedex = () => {
           </select>
         </form>
       </section>
+  
       <Pagination
         lastPage={lastPage}
         pagesInCurrentBlock={pagesInCurrentBlock}
@@ -54,6 +56,8 @@ export const Pokedex = () => {
         currentPage ={currentPage}
       />
       <PokemonList pokemons={itemsInCurrentPage} />
+        
+      
     </main>
   );
 };

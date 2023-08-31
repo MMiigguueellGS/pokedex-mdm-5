@@ -27,7 +27,7 @@ export const Pagination = ({
   const handleFirstPage = () => setCurrentPage(FIRST_PAGE);
 
   return (
-    <ul className="flex justify-center gap-4 p-4 items-center">
+    <ul className="flex justify-center  p-4 items-center">
       {currentPage >= 2 && <li onClick={handleFirstPage}>{"<<"}</li>}
       {currentPage >= 2 && <li onClick={handlePreviusPage}>{"<"}</li>}
 

@@ -1,17 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/modificando scroll/
+/*modificando scroll*/
 html::-webkit-scrollbar{
     -webkit-appearance: none;
-    width: 5px;
+    width: 15px;
     
 }
-/fondo srcoll/
+/*fondo srcoll*/
 html::-webkit-scrollbar-track{
     background-color: #030303;
 }
-/up scroll/
+/*up scroll*/
 html::-webkit-scrollbar-thumb{
     background-color: #df1212;
     border-radius: 1rem; }
