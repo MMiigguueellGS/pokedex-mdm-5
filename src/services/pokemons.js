@@ -118,5 +118,5 @@ export const joinPokemonTypes = (types = []) => {
 };
 
 export const randomIdPokemons = () => {
-  return Math.floor(Math.random() * 20);
+  return Math.floor(Math.random() * 1280);
 };
