@@ -27,7 +27,7 @@ export const PokemonDetail = () => {
         >
           <Link to='/pokedex/' className="absolute -top-[100%] z-10 text-white bg-zinc-700 font-bold text-sm rounded-full  inline-block py-1 px-5 shadow-lg shadow-slate-800/60" >Go Back</Link>
           <img
-            className="h-[200%] absolute left-1/2 -translate-x-1/2 bottom-0"
+            className="h-[200%] absolute left-1/2 -translate-x-1/2 bottom-0 hover:scale-110"
             src={pokemonData?.image}
             alt=""
           />

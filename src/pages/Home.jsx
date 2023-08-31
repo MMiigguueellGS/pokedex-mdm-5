@@ -29,10 +29,10 @@ export const Home = () => {
   }, [])
 
   return (
-    <main className="min-h-screen grid grid-rows-[1fr_auto] ">
+    <main className="min-h-screen grid grid-rows-[1fr_1fr_auto] ">
       
        {/* Card home */}
-      <article className={`m-auto w-[220px] text-center capitalize border-[5px] rounded-md ${
+      <article className={`m-auto w-[220px] text-center capitalize border-[5px] rounded-[1.1rem] ${
         borderStylePokemonType[homeIdPokemons?.types[0]]
       }`}>
       <header
@@ -58,16 +58,17 @@ export const Home = () => {
       </article> 
 
 
-      <section className="flex flex-col justify-center items-center mx-2">
-        <article>
+      <section className="flex flex-col  items-center mx-2">
+        <article className="grid gap-5">
           {/* seccion superior */}
           <div className="text-center">
             <img src="/images/banner.png" alt="" />
           </div>
           <h2 className="text-red-500 text-center text-2xl">!Hello trainer!</h2>
-          <p className="text-center text-lg">To start give your name</p>
+          <p className="text-center text-lg font-semibold">To start give your name</p>
           <form onSubmit={handleSubmit} className="flex justify-center">
             <input
+            className=" shadow-xl sha text-center  outline-none py-2"
               placeholder="your name..."
               id="nameTrainer"
               type="text"

@@ -24,10 +24,10 @@ export const Pokedex = () => {
   );
 
   return (
-    <main>
-      <section>
-        <p className="text-center text-2xl font-bold mt-4">
-          <span>Welcome <span className="text-red-500">{name}</span></span>
+    <main className="dark:bg-neutral-700 ">
+      <section >
+        <p className="text-center text-2xl font-bold pt-4">
+          <span className="dark:text-white">Welcome <span className="text-red-500">{name}</span></span>
         </p>
         <form className="text-center mt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
           <input

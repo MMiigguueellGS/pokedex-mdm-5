@@ -40,11 +40,11 @@ export const PokemonCard = ({ pokemonUrl }) => {
           </div>
         </header>
         <section className="font-Inter">
-          <h3 className="text-lg font-bold">{pokemonInfo?.name}</h3>
+          <h3 className={`text-lg font-bold ${nameStylePokemon[pokemonInfo?.types[0]]}`}>{pokemonInfo?.name}</h3>
           <h4>{joinPokemonTypes(pokemonInfo?.types)}</h4>
           <h5 className="text-sm mb-2">Types</h5>
           <hr />
-          <StatList stats={pokemonInfo?.stats} />
+          <StatList stats={pokemonInfo?.stats} type={pokemonInfo?.types[0]} />
         </section>
       </Link>
     </div>

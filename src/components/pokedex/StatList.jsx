@@ -1,6 +1,7 @@
 import { numberStylePokemon } from "../../shared/pokemon"
 
 export const StatList = ({ stats, type }) => {
+  console.log(type)
   return (
     <ul className="grid gap-2 grid-cols-3 text-xs p-2">
         {

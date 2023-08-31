@@ -27,13 +27,13 @@ export const Pagination = ({
   const handleFirstPage = () => setCurrentPage(FIRST_PAGE);
 
   return (
-    <ul className="flex justify-center  p-4 items-center">
-      {currentPage >= 2 && <li onClick={handleFirstPage}>{"<<"}</li>}
-      {currentPage >= 2 && <li onClick={handlePreviusPage}>{"<"}</li>}
+    <ul className="flex justify-center  p-4 items-center dark:text-white">
+      {currentPage >= 2 && <li className="p-2 hover:bg-red-400 cursor-pointer" onClick={handleFirstPage}>{"<<"}</li>}
+      {currentPage >= 2 && <li className="p-3 hover:bg-red-400 cursor-pointer" onClick={handlePreviusPage}>{"<"}</li>}
 
       {pagesInCurrentBlock.map((page) => (
         <li
-          className={`p-4 hover:bg-red-400 cursor-pointer ${
+          className={`p-3 hover:bg-red-400 cursor-pointer ${
             currentPage === page ? "text-white bg-red-500" : ""
           }`}
           key={page}
@@ -43,8 +43,8 @@ export const Pagination = ({
         </li>
       ))}
 
-      <li onClick={handleNextPage}>{">"}</li>
-      <li onClick={handleLastPage}>{">>"}</li>
+      <li className="p-3 hover:bg-red-400 cursor-pointer" onClick={handleNextPage}>{">"}</li>
+      <li className="p-2 hover:bg-red-400 cursor-pointer" onClick={handleLastPage}>{">>"}</li>
     </ul>
   );
 };
