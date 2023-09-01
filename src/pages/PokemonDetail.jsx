@@ -17,7 +17,7 @@ export const PokemonDetail = () => {
   }, []);
 
   return (
-    <main className=" grid gap-8   max-w-[1190px] mx-auto p-2 py-28 dark:text-white px-10">
+    <main className=" grid gap-8 font  max-w-[1190px] mx-auto p-2 py-28 dark:text-white px-10">
       <article className="">
         <header
           className={` relative h-[105px] rounded-2xl ${
