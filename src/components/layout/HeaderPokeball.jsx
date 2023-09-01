@@ -39,7 +39,7 @@ export const HeaderPokeball = ({ children }) => {
   const savedInfo = localStorage.getItem("dark");
 
   return (
-    <section className="dark:bg-neutral-700">
+    <section className="dark:bg-neutral-700 bg-[#d2d2d2]">
       <header className="">
         <div className="h-16 bg-red-600  relative ">
           <div className="absolute left-0 bottom-0 w-[210px] sm:w-[300px] ml-3">

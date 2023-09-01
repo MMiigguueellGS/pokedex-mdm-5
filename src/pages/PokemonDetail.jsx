@@ -77,7 +77,7 @@ export const PokemonDetail = () => {
                 {pokemonData?.types.map((type) => (
                   <span
                     key={type}
-                    className={` flex items-center justify-center px-5 py-1 text-white text-md font-semibold border-solid border-2 border-gray-200 rounded ${bgStylePokemonType[type]} shadow-lg shadow-slate-700/20 `}
+                    className={`  flex items-center justify-center px-5 py-1 text-[#9eb2c2] text-md font-semibold border-solid border-2 border-gray-200 rounded ${bgStylePokemonType[type]} shadow-lg shadow-slate-700/20 `}
                   >
                     {type}
                   </span>
